@@ -2,7 +2,6 @@
 #define _APP_H_
 
 #include "Task_Init.h"
-#define gear_Ratio 36.0f
 extern TaskHandle_t Block_Manipulator_Handle;
 extern Motor2006Ex_t manipulator[8];
 extern float init_rad[8];
