@@ -1,0 +1,17 @@
+block_manipulator\task_init.o: ..\MyTask\Task_Init.c
+block_manipulator\task_init.o: ..\MyTask\Task_Init.h
+block_manipulator\task_init.o: ..\MyTask\config.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+block_manipulator\task_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+block_manipulator\task_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+block_manipulator\task_init.o: ../Core/Inc/FreeRTOSConfig.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+block_manipulator\task_init.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+block_manipulator\task_init.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
+block_manipulator\task_init.o: ..\MyLib\CANDrive.h
