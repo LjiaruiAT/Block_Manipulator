@@ -8,6 +8,8 @@ float turn_init_rad[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 float send_rad[8] = {0, 0, 0, 0, 0, 0, 0, 0};
 int16_t motorCurrentBuf_1[4] = {0};
 int16_t motorCurrentBuf_2[4] = {0};
+volatile float now_deg[8];   /* 调试用，watch 里直接看 */
+
 typedef enum {
     BR_GET_SCORE_IDLE = 0,
     UP_67,
@@ -173,6 +175,7 @@ for (uint8_t i = 0; i < 8; i++)
 		}
 		for (uint8_t i = 0; i < 8; i++)
         {
+			now_deg[i] = Manipulator_Rad(i);
             PID_Control2(Manipulator_Rad(i), send_rad[i], &manipulator[i].pos_pid);
             PID_Control2((float)manipulator[i].motor.Speed,manipulator[i].pos_pid.pid_out,&manipulator[i].vel_pid);
         }
