@@ -17,7 +17,7 @@ typedef enum {
 	UP_45,
 	DOWN_45,
 	PULL_APART_3,
-	RETRACT_3,
+	RETRACT_3,//6
 	TURN_12,
 	TURN_BACK_12,
 } BR_get_score_state_t;
@@ -33,13 +33,13 @@ static void Manipulator_Config(void)
         m->hcan = (i < 4) ? &hcan1 : &hcan2;  
         m->ID   = id_tab[i];
 
-        m->pos_pid.Kp = 1.0f;
+        m->pos_pid.Kp = 15.0f;
         m->pos_pid.Ki = 0.0f;
         m->pos_pid.Kd = 0.0f;
         m->pos_pid.limit = 6000.0f;
         m->pos_pid.output_limit = 6000.0f;
 
-        m->vel_pid.Kp = 5.0f;
+        m->vel_pid.Kp = 12.0f;
         m->vel_pid.Ki = 0.0f;
         m->vel_pid.Kd = 0.0f;
         m->vel_pid.limit = 16384.0f;
@@ -84,19 +84,19 @@ send_rad[2] = climb_rad[2];
 }
 void Retract_3(void)
 {
-send_rad[2] = init_rad[2];
+send_rad[2] = init_rad[2] + 300.0f;
 }
 void turn_12()
 {
-send_rad[0] = turn_rad[0] + 90.0f;
-send_rad[1] = turn_rad[1] - 90.0f;
+send_rad[0] = turn_rad[0] + 180.0f;
+send_rad[1] = turn_rad[1] - 180.0f;
 }
 void turn_back_12()
 {
 send_rad[0] = turn_init_rad[0];
 send_rad[1] = turn_init_rad[1];
 }
-static BR_get_score_state_t BR_get_score_state = BR_GET_SCORE_IDLE;
+BR_get_score_state_t BR_get_score_state = BR_GET_SCORE_IDLE;
 void Block_Manipulator(void *pvParameters)
 {
     Manipulator_Config();

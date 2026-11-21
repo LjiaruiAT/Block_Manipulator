@@ -47,3 +47,7 @@ block_manipulator\main.o: ../Core/Inc/can.h
 block_manipulator\main.o: ../Core/Inc/dma.h
 block_manipulator\main.o: ../Core/Inc/usart.h
 block_manipulator\main.o: ../Core/Inc/gpio.h
+block_manipulator\main.o: ..\MyLib\CANDrive.h
+block_manipulator\main.o: ..\MyLib\RMLibHead.h
+block_manipulator\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+block_manipulator\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
